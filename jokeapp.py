@@ -22,10 +22,6 @@ def tellmeajoke():
 
     return random_joke
 
-if  __name__ == "__main__":
-    try:
-        pirt = int(os.getenv("PORT"))
-        app.run(host='0.0.0.0', port=port)
-    except Exception:
-        app.run(host= 'localhost', port=8080)
-     
+port = getenv('PORT', '5000')
+if __name__ == "__main__":
+    app.run(debug=False, host='0.0.0.0', port=port, threaded=True)
