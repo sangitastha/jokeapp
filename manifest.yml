@@ -1,7 +1,0 @@
----
-applications:
-- memory: 128M 
-  disk: 256M
-  instances: 1
-  name: jokeapp-test
-  random-route: false
